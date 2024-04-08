@@ -3,7 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
 import { Stick } from "next/font/google";
 
-export default function Home() {
+function Home() {
   const targetRef = useRef(null);
   const { scrollYProgress } = useScroll({
     target: targetRef,
@@ -382,3 +382,5 @@ export default function Home() {
     </div>
   );
 }
+
+export default Home;
