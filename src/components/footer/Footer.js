@@ -41,7 +41,8 @@ function Footer() {
       </div>
       <div className="absolute bottom-0 w-full text-white text-center p-4 flex justify-center">
         <div className="text-white text-lg flex flex-col gap-2 w-[1100px] max-2xl:w-[1200px] max-xl:w-[920px] max-lg:w-[680px] max-md:w-[440px] max-sm:w-[370px]">
-          <p>Built with 🤍 by Team The Product Dev's</p>
+          <p>Built with 🤍 by Team The Product Dev&apos;s</p>
+
           <a href="mailto:namanrai309@gmail.com">
             Email us: namanrai309@gmail.com
           </a>
