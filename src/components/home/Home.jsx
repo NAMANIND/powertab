@@ -1,7 +1,6 @@
 "use client";
 import { useRef, useState, useEffect } from "react";
 import { useScroll, motion, useTransform } from "framer-motion";
-import { Stick } from "next/font/google";
 
 function Home() {
   const targetRef = useRef(null);
@@ -128,52 +127,6 @@ function Home() {
     [0, 0.27, 0.3],
     ["none", "none", "block"]
   );
-
-  const words = [
-    <span>Fear</span>,
-    <span>forgetting</span>,
-    <span className="">
-      <span className="text font-semibold  leading-[140%] ">Ctrl+Shift+T?</span>
-      😅
-    </span>,
-
-    <motion.p className="text-4xl text-left leading-[140%] font-semibold text-[#030F2B] ">
-      <span className="text font-semibold ">Power Tab </span>has your back,
-      <br /> save and restore your
-      <br /> last tabs with
-      <br /> easeeeeee!
-    </motion.p>,
-  ];
-
-  const words2 = [
-    <span className="text font-semibold   ">Streamlined</span>,
-    <span className="text font-semibold  leading-[140%] ">Management</span>,
-
-    <motion.p className="text-4xl text-left font-semibold leading-[140%] text-[#030F2B] ">
-      Arrange tabs into folders
-      <br />
-      for your projects or any
-      <br />
-      topic. Simplify and stay
-      <br />
-      focusedddd!
-    </motion.p>,
-  ];
-
-  const words3 = [
-    <span className="text font-semibold   ">Effortless</span>,
-    <span className="text font-semibold  leading-[140%] ">Collaboration</span>,
-
-    <motion.p className="text-4xl text-left font-semibold leading-[140%] text-[#030F2B] ">
-      Share your tabs folder
-      <br />
-      effortlessly with Power
-      <br />
-      Tab: Copy, Execute, and
-      <br />
-      Collaborateeee!
-    </motion.p>,
-  ];
 
   return (
     <div
@@ -383,4 +336,49 @@ function Home() {
   );
 }
 
+const words = [
+  <span>Fear</span>,
+  <span>forgetting</span>,
+  <span className="">
+    <span className="text font-semibold  leading-[140%] ">Ctrl+Shift+T?</span>
+    😅
+  </span>,
+
+  <motion.p className="text-4xl text-left leading-[140%] font-semibold text-[#030F2B] ">
+    <span className="text font-semibold ">Power Tab </span>has your back,
+    <br /> save and restore your
+    <br /> last tabs with
+    <br /> easeeeeee!
+  </motion.p>,
+];
+
+const words2 = [
+  <span className="text font-semibold   ">Streamlined</span>,
+  <span className="text font-semibold  leading-[140%] ">Management</span>,
+
+  <motion.p className="text-4xl text-left font-semibold leading-[140%] text-[#030F2B] ">
+    Arrange tabs into folders
+    <br />
+    for your projects or any
+    <br />
+    topic. Simplify and stay
+    <br />
+    focusedddd!
+  </motion.p>,
+];
+
+const words3 = [
+  <span className="text font-semibold   ">Effortless</span>,
+  <span className="text font-semibold  leading-[140%] ">Collaboration</span>,
+
+  <motion.p className="text-4xl text-left font-semibold leading-[140%] text-[#030F2B] ">
+    Share your tabs folder
+    <br />
+    effortlessly with Power
+    <br />
+    Tab: Copy, Execute, and
+    <br />
+    Collaborateeee!
+  </motion.p>,
+];
 export default Home;
