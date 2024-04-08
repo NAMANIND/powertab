@@ -276,7 +276,7 @@ export default function Home() {
               <motion.h1 className="text-6xl text-left font-bold text-[#030F2B] max-md:text-2xl">
                 {words.map((word, index) => (
                   <motion.span
-                    key={index}
+                    key={index + word}
                     initial={{ opacity: 0, x: 20 }}
                     animate={{
                       opacity: isVisibleState > index ? 1 : 0,
