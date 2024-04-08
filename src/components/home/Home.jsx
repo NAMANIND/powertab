@@ -337,14 +337,17 @@ function Home() {
 }
 
 const words = [
-  <span>Fear</span>,
-  <span>forgetting</span>,
-  <span className="">
+  <span key="1">Fear</span>,
+  <span key="2">forgetting</span>,
+  <span key="3" className="">
     <span className="text font-semibold  leading-[140%] ">Ctrl+Shift+T?</span>
     😅
   </span>,
 
-  <motion.p className="text-4xl text-left leading-[140%] font-semibold text-[#030F2B] ">
+  <motion.p
+    key="4"
+    className="text-4xl text-left leading-[140%] font-semibold text-[#030F2B] "
+  >
     <span className="text font-semibold ">Power Tab </span>has your back,
     <br /> save and restore your
     <br /> last tabs with
@@ -353,10 +356,17 @@ const words = [
 ];
 
 const words2 = [
-  <span className="text font-semibold   ">Streamlined</span>,
-  <span className="text font-semibold  leading-[140%] ">Management</span>,
+  <span key="1" className="text font-semibold">
+    Streamlined
+  </span>,
+  <span key="2" className="text font-semibold  leading-[140%] ">
+    Management
+  </span>,
 
-  <motion.p className="text-4xl text-left font-semibold leading-[140%] text-[#030F2B] ">
+  <motion.p
+    key="3"
+    className="text-4xl text-left font-semibold leading-[140%] text-[#030F2B] "
+  >
     Arrange tabs into folders
     <br />
     for your projects or any
@@ -368,10 +378,17 @@ const words2 = [
 ];
 
 const words3 = [
-  <span className="text font-semibold   ">Effortless</span>,
-  <span className="text font-semibold  leading-[140%] ">Collaboration</span>,
+  <span key="1" className="text font-semibold   ">
+    Effortless
+  </span>,
+  <span key="2" className="text font-semibold  leading-[140%] ">
+    Collaboration
+  </span>,
 
-  <motion.p className="text-4xl text-left font-semibold leading-[140%] text-[#030F2B] ">
+  <motion.p
+    key="3"
+    className="text-4xl text-left font-semibold leading-[140%] text-[#030F2B] "
+  >
     Share your tabs folder
     <br />
     effortlessly with Power
@@ -381,4 +398,5 @@ const words3 = [
     Collaborateeee!
   </motion.p>,
 ];
+
 export default Home;
