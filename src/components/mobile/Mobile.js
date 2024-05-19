@@ -11,8 +11,8 @@ function Home() {
   const opacity = useTransform(scrollYProgress, [0, 0.1], [1, 0]);
   const opacity2 = useTransform(
     scrollYProgress,
-    [0.12, 0.18, 0.42, 0.45],
-    [0, 1, 1, 0]
+    [0.12, 0.18, 0.42, 1],
+    [0, 1, 1, 1]
   );
 
   const displaygo = useTransform(
@@ -62,7 +62,7 @@ function Home() {
   );
 
   const position = useTransform(scrollYProgress, (pos) =>
-    pos >= 1 ? "relative" : "fixed"
+    pos >= 1 ? "relative" : "relative"
   );
 
   const heading = useTransform(
@@ -130,7 +130,7 @@ function Home() {
 
   return (
     <div
-      className="flex flex-col items-center h-[800vh]  pb-20 font-bold max-md:px-5"
+      className="flex flex-col items-center   pb-20 font-bold max-md:px-5"
       style={{
         background:
           "linear-gradient(285.44deg, rgba(1, 194, 251, 0.64) -45.69%, rgba(255, 255, 255, 0.64) 39.38%, rgba(255, 255, 255, 0.64) 62.12%, rgba(23, 91, 234, 0.64) 165.16%);",
@@ -162,22 +162,19 @@ function Home() {
           </div>
         </div>
       </div>
-      <motion.div
-        style={{ position }}
-        className="box-border mx-auto  w-[1100px] max-2xl:w-[1200px] max-xl:w-[920px] max-lg:w-[680px] max-md:w-[440px] max-sm:w-[370px]"
-      >
+      <motion.div style={{ position }} className="box-border  w-full">
         <div className="flex flex-col  gap-5 justify-center items-center">
           <motion.div
             style={{ opacity }}
-            className="flex flex-col  gap-5 justify-center items-center"
+            className="flex flex-col  gap-0 justify-center items-center"
           >
-            <div className="mt-36 text text-8xl px-5 uppercase tracking-tighter bg-clip-text max-md:mt-10 max-md:text-4xl">
+            <div className="mt-20 text  sm:text-8xl text-5xl sm:px-5 px-1 uppercase tracking-tighter bg-clip-text ">
               Power Tab
             </div>
-            <div className=" text-2xl tracking-tighter font-normal  text-slate-900 max-md:mt-10 max-md:max-w-full sm:text-4xl">
+            <div className="text-2xl  tracking-tighter font-normal  text-slate-900  max-md:max-w-full sm:text-6xl">
               Save, Share & Manage
             </div>
-            <div className="flex relative z-50 gap-5 justify-between mt-5 text-2xl tracking-tighter text-center whitespace-nowrap max-md:mt-10">
+            <div className="flex relative z-50 gap-5  my-16 justify-between  text-2xl tracking-tighter text-center whitespace-nowrap ">
               <a
                 href="https://chromewebstore.google.com/detail/power-tab-save-share-mana/mmonhlejcmgecfbihofklieljhphkkan"
                 target="_blank"
@@ -217,119 +214,59 @@ function Home() {
               </a>
             </div>
           </motion.div>
-          <motion.div
-            className="flex  h-screen top-0  items-center mx-auto  w-[1100px] max-2xl:w-[1200px] max-xl:w-[920px] max-lg:w-[680px] max-md:w-[440px] max-sm:w-[370px] fixed "
-            style={{ justifyContent: textposition }}
-            transition={{ duration: 0.1, delay: 0.1 }}
-          >
-            <motion.div
-              className="w-1/2 absolute"
-              style={{ opacity: opacity2 }}
-            >
-              <motion.h1 className="text-6xl text-left font-bold text-[#030F2B] max-md:text-2xl">
-                {words.map((word, index) => (
-                  <motion.span
-                    key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{
-                      opacity: isVisibleState > index ? 1 : 0,
-                      x: isVisibleState > index ? 0 : 20,
-                    }}
-                    transition={{ duration: 0.1, delay: 0.1 }}
-                    style={{ display: "inline-block", marginRight: "8px" }}
-                  >
-                    {word}{" "}
-                  </motion.span>
-                ))}
-              </motion.h1>
+          <div className="w-full">
+            <motion.img
+              style={{ scale, x, y, display }}
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/967cc3bee4a8f75cecb8db93f708c651683743fc26daea8c3b37e9ed723dd82d?apiKey=5e27b1defd60460eaa6dca842133145f&"
+              className="mt-20 max-w-[98vw] items-center aspect-[1.14] w-[98%] max-md:mt-10 absolute top-[100%] transform "
+            />
+          </div>
+        </div>
+      </motion.div>
 
-              <motion.img
-                style={{
-                  display: display1,
-                  x: ximg,
-                  y: "-130%",
-                  opacity: opacityimg,
-                }}
-                loading="lazy"
+      <motion.div
+        style={{ opacity: opacity2 }}
+        className="flex flex-col gap-5 justify-center items-center w-full h-full"
+      >
+        <div className="flex   items-center  max-w-full">
+          <div className="flex flex-col gap-24 justify-center items-center">
+            <div className=" w-full">
+              <h1 className="text-xl text-left mb-10 font-semibold text-[#030F2B] ">
+                Power Tab has your back, <br /> save and restore your <br />{" "}
+                last tabs with easeeeeee!
+              </h1>
+              <img
                 src="/pt1.png"
-                className="mt-20 max-w-full object-cover object-top w-[595px] max-md:mt-10 absolute top-[100%] transform "
+                alt="Power Tab"
+                className="w-[100%] h-[100%] object-cover"
               />
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="w-1/2 absolute"
-              style={{ opacity: opacity3 }}
-            >
-              <motion.h1 className="text-6xl text-left font-bold   text-[#030F2B] max-md:text-2xl">
-                {words2.map((word, index) => (
-                  <motion.span
-                    key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{
-                      opacity: isVisibleState2 > index ? 1 : 0,
-                      x: isVisibleState2 > index ? 0 : 20,
-                    }}
-                    transition={{ duration: 0.1, delay: 0.1 }}
-                    style={{ display: "inline-block", marginRight: "8px" }}
-                  >
-                    {word}{" "}
-                  </motion.span>
-                ))}
-              </motion.h1>
-
-              <motion.img
-                style={{
-                  display: display1,
-                  x: ximg,
-                  y: yimg,
-                  opacity: opacityimg,
-                }}
-                loading="lazy"
-                src="/pt2.png"
-                className="mt-20 max-w-full object-cover object-top w-[595px] max-md:mt-10 absolute top-[100%] transform "
+            <div>
+              <h1 className="text-xl text-left mb-10 font-semibold text-[#030F2B]">
+                Arrange tabs into folders <br /> for your projects or any <br />{" "}
+                topic. Simplify and stay <br /> focusedddd!
+              </h1>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/016aece747732557fa903726e03e1ecbae02c56834ed6674c32fd190eb2e35c2?apiKey=5e27b1defd60460eaa6dca842133145f&"
+                alt="Power Tab"
+                className="w-[100%] h-[100%] object-cover"
               />
-            </motion.div>
-
-            <motion.div
-              className="w-1/2 absolute"
-              style={{ opacity: opacity4 }}
-            >
-              <motion.h1 className="text-6xl text-left font-bold   text-[#030F2B] max-md:text-2xl">
-                {words3.map((word, index) => (
-                  <motion.span
-                    key={index}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{
-                      opacity: isVisibleState3 > index ? 1 : 0,
-                      x: isVisibleState3 > index ? 0 : 20,
-                    }}
-                    transition={{ duration: 0.1, delay: 0.1 }}
-                    style={{ display: "inline-block", marginRight: "8px" }}
-                  >
-                    {word}{" "}
-                  </motion.span>
-                ))}
-              </motion.h1>
-
-              <motion.img
-                style={{
-                  display: display1,
-                  x: ximg,
-                  y: "-85%",
-                  opacity: opacityimg,
-                }}
-                loading="lazy"
-                src="/pt3.png"
-                className="mt-20 max-w-full object-contain object-top w-[595px] max-md:mt-10 absolute top-[100%] transform "
+            </div>
+            <div>
+              <h1 className="text-xl text-left font-semibold text-[#030F2B] mb-10">
+                Share your tabs folder <br /> effortlessly with Power <br />{" "}
+                Tab: Copy, Execute, and <br /> Collaborateeee!
+              </h1>
+              <img
+                src="https://cdn.builder.io/api/v1/image/assets/TEMP/016aece747732557fa903726e03e1ecbae02c56834ed6674c32fd190eb2e35c2?apiKey=5e27b1defd
+60460eaa6dca842133145f&"
+                alt="Power Tab"
+                className="w-[100%] h-[100%] object-cover"
               />
-            </motion.div>
-          </motion.div>
-          <motion.img
-            style={{ scale, x, y, display }}
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/967cc3bee4a8f75cecb8db93f708c651683743fc26daea8c3b37e9ed723dd82d?apiKey=5e27b1defd60460eaa6dca842133145f&"
-            className="mt-20 max-w-full aspect-[1.14] w-[595px] max-md:mt-10 absolute top-[100%] transform "
-          />
+            </div>
+          </div>
         </div>
       </motion.div>
     </div>

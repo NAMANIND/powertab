@@ -7,13 +7,13 @@ function Footer() {
         <img
           loading="lazy"
           src="https://cdn.builder.io/api/v1/image/assets/TEMP/967cc3bee4a8f75cecb8db93f708c651683743fc26daea8c3b37e9ed723dd82d?apiKey=5e27b1defd60460eaa6dca842133145f&"
-          className="mt-20 max-w-full  w-[10vw] max-md:mt-10  "
+          className="mt-20 max-w-full  sm:w-[10vw] w-1/2 max-md:mt-10  "
         />
 
-        <h1 className="text-white text-9xl leading-[120%] font-bold">
+        <h1 className="text-white sm:text-9xl text-5xl leading-[120%] font-bold">
           Power Tab
         </h1>
-        <div className=" text-2xl tracking-tighter font-normal  text-white max-md:mt-10 max-md:max-w-full max-md:text-4xl">
+        <div className=" text-2xl tracking-tighter font-normal  text-white  max-md:max-w-full sm:text-4xl">
           Save, Share & Manage
         </div>
         <a
@@ -40,7 +40,7 @@ function Footer() {
         </a>
       </div>
       <div className="absolute bottom-0 w-full text-white text-center p-4 flex justify-center">
-        <div className="text-white text-lg flex flex-col gap-2 w-[1100px] max-2xl:w-[1200px] max-xl:w-[920px] max-lg:w-[680px] max-md:w-[440px] max-sm:w-[370px]">
+        <div className="text-white text-sm sm:text-sm flex flex-col gap-2 w-[1100px] max-2xl:w-[1200px] max-xl:w-[920px] max-lg:w-[680px] max-md:w-[440px] max-sm:w-[370px]">
           <p>Built with 🤍 by Team The Product Dev&apos;s</p>
 
           <a href="mailto:namanrai309@gmail.com">
