@@ -219,7 +219,7 @@ function Home() {
               style={{ scale, x, y, display }}
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/967cc3bee4a8f75cecb8db93f708c651683743fc26daea8c3b37e9ed723dd82d?apiKey=5e27b1defd60460eaa6dca842133145f&"
-              className="mt-20 max-w-[98vw] items-center aspect-[1.14] w-[98%] max-md:mt-10 absolute top-[100%] transform "
+              className="mt-20 max-w-[98vw] items-center aspect-[1.14] w-[98%] max-md:mt-10 absolute top-[100%] -translate-y-1/2 "
             />
           </div>
         </div>
@@ -232,7 +232,7 @@ function Home() {
         <div className="flex   items-center  max-w-full">
           <div className="flex flex-col gap-24 justify-center items-center">
             <div className=" w-full">
-              <h1 className="text-xl text-left mb-10 font-semibold text-[#030F2B] ">
+              <h1 className="text-2xl text-left mb-10 font-semibold text-[#030F2B] ">
                 Power Tab has your back, <br /> save and restore your <br />{" "}
                 last tabs with easeeeeee!
               </h1>
@@ -244,7 +244,7 @@ function Home() {
             </div>
 
             <div>
-              <h1 className="text-xl text-left mb-10 font-semibold text-[#030F2B]">
+              <h1 className="text-2xl text-left mb-10 font-semibold text-[#030F2B]">
                 Arrange tabs into folders <br /> for your projects or any <br />{" "}
                 topic. Simplify and stay <br /> focusedddd!
               </h1>
@@ -255,7 +255,7 @@ function Home() {
               />
             </div>
             <div>
-              <h1 className="text-xl text-left font-semibold text-[#030F2B] mb-10">
+              <h1 className="text-2xl text-left font-semibold text-[#030F2B] mb-10">
                 Share your tabs folder <br /> effortlessly with Power <br />{" "}
                 Tab: Copy, Execute, and <br /> Collaborateeee!
               </h1>
